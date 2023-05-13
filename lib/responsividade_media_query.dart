@@ -13,6 +13,8 @@ class _ResponsividadeMediaQueryState extends State<ResponsividadeMediaQuery> {
   Widget build(BuildContext context) {
     var largura = MediaQuery.of(context).size.width;
     var altura = MediaQuery.of(context).size.height;
+    var alturaBarraStatus = MediaQuery.of(context).padding.top;
+
     return Scaffold(
       appBar: AppBar(
         title: const Text('Responsividade'),
@@ -21,7 +23,7 @@ class _ResponsividadeMediaQueryState extends State<ResponsividadeMediaQuery> {
         children: [
           Container(
             width: largura,
-            height: altura,
+            height: altura - alturaBarraStatus,
             color: Colors.red,
           ),
         ],
